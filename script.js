@@ -10,11 +10,11 @@ var special = '~!@#$%^&*()_+=';
 
 // Requesting user input for password lenght
 var passwordLength = 0;
-
-
-    
-
+ 
+// Storing user input
 var userInput = {};
+
+// function to generate password criteria based on user imput
 
 function generatePassword() {
   passwordLength = parseInt(prompt("Your password must be between 8 and 128 characters. How many characters would you like your password to be?"));
@@ -41,12 +41,12 @@ function generatePassword() {
 }
 }
 
-// generatePassword();
-
+// function to randomize chracter selection for password
 function randomizedCharacter(str) {
   return str[Math.floor(Math.random() * str.length)]
 }
 
+// function to write the final password result
 function writePassword() {
   generatePassword();
   var passwordResult = '';
@@ -60,8 +60,7 @@ function writePassword() {
   return passwordResult
 }
 
-// writePassword();
-
+// button calling function to write final password result
 button.addEventListener("click", function(){
   password.innerHTML = writePassword();
 })
